@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://127.0.0.1:8000/posts
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"title\":\"Top beaches in India\",\r
+
+    \    \"content\":\"Check out these awesome beaches\",\r
+
+    \    \"rating\": 7\r
+
+    }"
+order: 4288905797525871
