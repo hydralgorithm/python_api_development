@@ -3,6 +3,7 @@ from fastapi.params import Body
 from pydantic import BaseModel
 from typing import Optional
 from random import randrange
+import psycopg2
 
 app = FastAPI()
 
@@ -10,7 +11,7 @@ class Post(BaseModel):
     title: str
     content: str
     published: bool = True
-    rating: Optional[int] = None
+    # rating: Optional[int] = None
 
 my_posts = [{"title":"title of post 1", "content":"content of post 1", "id":1},
             {"title":"Favourite foods", "content":"Pizza Yum Yum", "id":2}]
@@ -83,5 +84,3 @@ def update_post(id:int, post: Post):
     my_posts[index] = post_dict
 
     return {"data": post_dict}
-
-# Commented
