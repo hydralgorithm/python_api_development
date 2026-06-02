@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import Optional
 from random import randrange
 import psycopg2
-
+# comm
 app = FastAPI()
 
 class Post(BaseModel):
